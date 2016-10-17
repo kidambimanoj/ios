@@ -9,22 +9,32 @@
 import UIKit
 import MessageUI
 
-class CreateViewController: UIViewController, UITextFieldDelegate, MFMessageComposeViewControllerDelegate {
+class CreateViewController: UIViewController, UITextFieldDelegate,
+    UIPickerViewDelegate, UIPickerViewDataSource,
+    UITextViewDelegate,
+MFMessageComposeViewControllerDelegate {
     
     
     // MARK: Models
-    private var keypad = NumberKeypad()
     private var alert = AlertTrigger()
     
+    var pickerData = ["None": "", "Anusha":"8324549864", "Manoj":"8327858331"]
+    
     // MARK: Outlets
+    
+    @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var display: UILabel!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var myNamePicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        phoneNumber.delegate = self
+        phoneNumber.keyboardType = .numberPad
         nameField.delegate = self
-        textField.delegate = self
+        textView.delegate = self
+        myNamePicker.delegate = self
+        myNamePicker.dataSource = self
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -32,21 +42,53 @@ class CreateViewController: UIViewController, UITextFieldDelegate, MFMessageComp
         return true
     }
     
-    // MARK: Actions
-    
-    @IBAction func buttonClick(_ sender: UIButton) {
-        keypad.generateDisplay(newDisplay: sender.currentTitle!)
-        display.text = keypad.display
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField != phoneNumber {
+            return true
+        }
+        
+        
+        let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
+        
+        let bool = string.rangeOfCharacter(from: invalidCharacters, options: [], range: string.startIndex ..< string.endIndex) == nil
+        
+        if(bool) {
+            if phoneNumber.text! == "0" {
+                phoneNumber.text! = ""
+                return false
+            }
+        }
+        
+        return bool && phoneNumber.text!.characters.count < 10
     }
     
+       
+    //MARK: Data Sources
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    //MARK: Delegates
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Array(pickerData.keys)[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        nameField.text = Array(pickerData.keys)[row]
+        phoneNumber.text = pickerData[Array(pickerData.keys)[row]]
+    }
+    
+    
+    // MARK: Actions
     @IBAction func reset(_ sender: UIButton) {
-        //reset keypad
-        keypad = NumberKeypad()
-        display.text = keypad.display
-        
-        //reset other fields
-        nameField.text = ""
-        textField.text = ""
+        phoneNumber.text = pickerData.first?.value
+        nameField.text = pickerData.first?.key
+        textView.text = ""
     }
     
     func navigationControllerSupportedInterfaceOrientations(_ navigationController: UINavigationController) -> UIInterfaceOrientationMask {
@@ -72,7 +114,7 @@ class CreateViewController: UIViewController, UITextFieldDelegate, MFMessageComp
     
     @IBAction func send(_ sender: UIButton) {
         
-        if alert.isErrorAlert(textField.text, display: display.text){
+        if alert.isErrorAlert(textView.text, display: phoneNumber.text){
             let title = "Error"
             let message = "Enter the ph# and the text"
             let alertController = UIAlertController(
@@ -92,20 +134,16 @@ class CreateViewController: UIViewController, UITextFieldDelegate, MFMessageComp
         }
         
         let title = "Hello \(nameField.text!)"
-        let message = "I would like to remind you about \(textField.text!)"
+        let message = "I would like to remind you about \(textView.text!)"
         
         
         let messageVC = MFMessageComposeViewController()
         
         messageVC.body = title + message
-        messageVC.recipients = [display.text!]
+        messageVC.recipients = [phoneNumber.text!]
         messageVC.messageComposeDelegate = self;
         
         self.present(messageVC, animated: false, completion: nil)
-        
-        
-     
-        
-           }
+    }
     
 }

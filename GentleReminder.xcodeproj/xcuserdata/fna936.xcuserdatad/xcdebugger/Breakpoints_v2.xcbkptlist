@@ -74,13 +74,90 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GentleReminder/CreateViewController.swift"
-            timestampString = "498357830.640431"
+            timestampString = "498443935.484202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "CreateViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GentleReminder.CreateViewController.__deallocating_deinit"
+                  moduleName = "GentleReminder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fna936/Desktop/GentleReminder/GentleReminder/CreateViewController.swift"
+                  timestampString = "498443426.465334"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GentleReminder.CreateViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; GentleReminder.CreateViewController"
+                  moduleName = "GentleReminder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fna936/Desktop/GentleReminder/GentleReminder/CreateViewController.swift"
+                  timestampString = "498443426.466669"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GentleReminder.CreateViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; GentleReminder.CreateViewController"
+                  moduleName = "GentleReminder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fna936/Desktop/GentleReminder/GentleReminder/CreateViewController.swift"
+                  timestampString = "498443426.468039"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GentleReminder.CreateViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;GentleReminder.CreateViewController&gt;"
+                  moduleName = "GentleReminder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fna936/Desktop/GentleReminder/GentleReminder/CreateViewController.swift"
+                  timestampString = "498443426.4692"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GentleReminder.CreateViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;GentleReminder.CreateViewController&gt;"
+                  moduleName = "GentleReminder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fna936/Desktop/GentleReminder/GentleReminder/CreateViewController.swift"
+                  timestampString = "498443426.470342"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,11 +167,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GentleReminder/CreateViewController.swift"
-            timestampString = "498357995.147298"
+            timestampString = "498449876.61142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "messageComposeViewController(_:didFinishWith:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +183,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GentleReminder/CreateViewController.swift"
-            timestampString = "498359086.098058"
+            timestampString = "498449876.61142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "send(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,11 +199,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GentleReminder/CreateViewController.swift"
-            timestampString = "498358562.499578"
+            timestampString = "498449876.61142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "messageComposeViewController(_:didFinishWith:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +215,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GentleReminder/CreateViewController.swift"
-            timestampString = "498359086.098058"
+            timestampString = "498449876.61142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "send(_:)"
             landmarkType = "7">
          </BreakpointContent>
